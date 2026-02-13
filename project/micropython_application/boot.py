@@ -1,4 +1,4 @@
-from configuration import ssid, key
+from configuration import SSID, KEY
 
 def network_connect() :
     import network
@@ -10,7 +10,7 @@ def network_connect() :
 
     # enable and connect wlan
     wlan.active(True)
-    wlan.connect(ssid,key)
+    wlan.connect(SSID,KEY)
 
     # wait for the connection to establish
     sleep(5)

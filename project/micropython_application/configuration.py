@@ -1,9 +1,9 @@
-ssid = "A1-257215"
-key = "AL9AVZ3GKU"
+SSID = "A1-257215"
+KEY = "AL9AVZ3GKU"
 
 # define labels (order must be the same as in Deepcraft)
-labels = ["nothing", "on", "off", "dimmer","lighter"]
+LABELS = ["nothing", "on", "off", "dimmer","lighter"]
 
 # IMU
-sample_hz = 25
-_sleep_s = 1.0 / sample_hz
+SAMPLE_FREQ = 50 # Hz
+SAMPLE_TIME = 1.0 / SAMPLE_FREQ
