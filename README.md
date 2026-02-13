@@ -30,7 +30,7 @@ Please actively use git commits to document your progress and regularly push you
 | MicroPython Hands-on Introduction       | 09.02.2026 | 10:00 | **On-site** |
 | DEEPCRAFT™ Studio Hands-on Introduction | 10.02.2026 | 09:00 | **On-site** |
 | **Presentation of Project Ideas**       | 10.02.2026 | 09:00 | **On-site** |
-| **Mandatory** Check-in & Q&A Session    | 13.02.2026 | 15:00 | Online      |
+| [**Mandatory** Check-in & Q&A Session](https://teams.microsoft.com/meet/36912038824995?p=IZrHU7UTvUlSL3583i)    | 13.02.2026 | 15:00 | Online      |
 | **Mandatory** Check-in & Q&A Session    | 17.02.2026 | 16:00 | Online      |
 | **Mandatory** Check-in & Q&A Session    | 19.02.2026 | 16:00 | Online      |
 | **Final Submission**                    | 22.02.2026 | 23:59 | Online      |
