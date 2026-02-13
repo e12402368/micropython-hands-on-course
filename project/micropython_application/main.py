@@ -45,5 +45,6 @@ while True:
             # End is a carriage return and not a newline. This way the output gets overwritten
             print(f"Label: {labels[idx]:<12} Score: {score*100:.2f}%", end='\r')
             
-            
+    # wait bevor the next iteration
+    time.sleepms(1)
             
