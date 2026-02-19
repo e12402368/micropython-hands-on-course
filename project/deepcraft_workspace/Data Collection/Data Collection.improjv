@@ -8,7 +8,7 @@
     <CodeGenerationParams>
       <Unit id="d419d86b-7b57-41d3-9a74-ab428f13a213">
         <Input>node_4</Input>
-        <Output>node_9</Output>
+        <Output>node_11</Output>
         <Platform>GenericC99</Platform>
         <OutputFileName>model</OutputFileName>
         <OutputDirectory>../Model Training/Models/conv2d-large-accuracy-0/CodeGen</OutputDirectory>
