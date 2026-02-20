@@ -2,9 +2,9 @@
 * DEEPCRAFT Studio 5.9.4563.0+34bdb7f4372a1120ca38a0cb02e62db5b4b78270
 * Copyright © 2023- Imagimob AB, All Rights Reserved.
 * 
-* Generated at 02/20/2026 17:30:32 UTC. Any changes will be lost.
+* Generated at 02/20/2026 19:47:31 UTC. Any changes will be lost.
 * 
-* Model ID  761f2975-e94b-455b-aabb-503fd0aae629
+* Model ID  fdd88b1c-49f1-4f4e-b556-6f84287d1595
 * 
 * Memory    Size                      Efficiency
 * Buffers   8800 bytes (RAM)          73 %
@@ -221,35 +221,35 @@ typedef struct {
 /*
 * Tensorflow Test Set
 * 
-* (ACC) Accuracy 97.171 %
-* (F1S) F1 Score 96.482 %
+* (ACC) Accuracy 97.245 %
+* (F1S) F1 Score 96.231 %
 * 
 * Name of class                                               unlabeled           Dimmer          Lighter              Off               On
-* (TP) True Positive or Correct Positive Prediction                5229                5                5                8                8
-* (FN) False Negative or Incorrect Negative Prediction               26               28               31               25               43
-* (FP) False Positive or Incorrect Positive Prediction              127                6                6               12                2
-* (TN) True Negative or Correct Negative Prediction                  26             5369             5366             5363             5355
-* (TPR) True Positive Rate or Sensitivity, Recall               99.51 %          15.15 %          13.89 %          24.24 %          15.69 %
-* (TNR) True Negative Rate or Specificity, Selectivity          16.99 %          99.89 %          99.89 %          99.78 %          99.96 %
-* (PPV) Positive Predictive Value or Precision                  97.63 %          45.45 %          45.45 %          40.00 %          80.00 %
-* (NPV) Negative Predictive Value                               50.00 %          99.48 %          99.43 %          99.54 %          99.20 %
-* (FNR) False Negative Rate or Miss Rate                         0.49 %          84.85 %          86.11 %          75.76 %          84.31 %
-* (FPR) False Positive Rate or Fall-Out                         83.01 %           0.11 %           0.11 %           0.22 %           0.04 %
-* (FDR) False Discovery Rate                                     2.37 %          54.55 %          54.55 %          60.00 %          20.00 %
-* (FOR) False Omission Rate                                     50.00 %           0.52 %           0.57 %           0.46 %           0.80 %
-* (F1S) F1 Score                                                98.56 %          22.73 %          21.28 %          30.19 %          26.23 %
+* (TP) True Positive or Correct Positive Prediction                5245                0                2                1               11
+* (FN) False Negative or Incorrect Negative Prediction               10               33               34               32               40
+* (FP) False Positive or Incorrect Positive Prediction              139                1                3                4                2
+* (TN) True Negative or Correct Negative Prediction                  14             5374             5369             5371             5355
+* (TPR) True Positive Rate or Sensitivity, Recall               99.81 %           0.00 %           5.56 %           3.03 %          21.57 %
+* (TNR) True Negative Rate or Specificity, Selectivity           9.15 %          99.98 %          99.94 %          99.93 %          99.96 %
+* (PPV) Positive Predictive Value or Precision                  97.42 %           0.00 %          40.00 %          20.00 %          84.62 %
+* (NPV) Negative Predictive Value                               58.33 %          99.39 %          99.37 %          99.41 %          99.26 %
+* (FNR) False Negative Rate or Miss Rate                         0.19 %         100.00 %          94.44 %          96.97 %          78.43 %
+* (FPR) False Positive Rate or Fall-Out                         90.85 %           0.02 %           0.06 %           0.07 %           0.04 %
+* (FDR) False Discovery Rate                                     2.58 %         100.00 %          60.00 %          80.00 %          15.38 %
+* (FOR) False Omission Rate                                     41.67 %           0.61 %           0.63 %           0.59 %           0.74 %
+* (F1S) F1 Score                                                98.60 %           0.00 %           9.76 %           5.26 %          34.38 %
 */
 
 
-#define IMAI_TEST_AVG_ACC 0.9717085798816568 // Accuracy
-#define IMAI_TEST_AVG_F1S 0.9648163918743571 // F1 Score
+#define IMAI_TEST_AVG_ACC 0.972448224852071 // Accuracy
+#define IMAI_TEST_AVG_F1S 0.9623120589141287 // F1 Score
 
 #define IMAI_TEST_STATS { \
- {name: "unlabeled", TP: 5229, FN: 26, FP: 127, TN: 26, TPR: 0.9950523311132, TNR: 0.1699346405228, PPV: 0.9762882748319, NPV: 0.5, FNR: 0.0049476688867, FPR: 0.8300653594771, FDR: 0.0237117251680, FOR: 0.5, F1S: 0.9855810008481, }, \
- {name: "On", TP: 8, FN: 43, FP: 2, TN: 5355, TPR: 0.1568627450980, TNR: 0.9996266567108, PPV: 0.8, NPV: 0.9920340866987, FNR: 0.8431372549019, FPR: 0.0003733432891, FDR: 0.2, FOR: 0.0079659133012, F1S: 0.2622950819672, }, \
- {name: "Off", TP: 8, FN: 25, FP: 12, TN: 5363, TPR: 0.2424242424242, TNR: 0.9977674418604, PPV: 0.4, NPV: 0.9953600593912, FNR: 0.7575757575757, FPR: 0.0022325581395, FDR: 0.6, FOR: 0.0046399406087, F1S: 0.3018867924528, }, \
- {name: "Dimmer", TP: 5, FN: 28, FP: 6, TN: 5369, TPR: 0.1515151515151, TNR: 0.9988837209302, PPV: 0.4545454545454, NPV: 0.9948119325551, FNR: 0.8484848484848, FPR: 0.0011162790697, FDR: 0.5454545454545, FOR: 0.0051880674448, F1S: 0.2272727272727, }, \
- {name: "Lighter", TP: 5, FN: 31, FP: 6, TN: 5366, TPR: 0.1388888888888, TNR: 0.9988830975428, PPV: 0.4545454545454, NPV: 0.9942560681860, FNR: 0.8611111111111, FPR: 0.0011169024571, FDR: 0.5454545454545, FOR: 0.0057439318139, F1S: 0.2127659574468, }, \
+ {name: "unlabeled", TP: 5245, FN: 10, FP: 139, TN: 14, TPR: 0.9980970504281, TNR: 0.0915032679738, PPV: 0.9741827637444, NPV: 0.5833333333333, FNR: 0.0019029495718, FPR: 0.9084967320261, FDR: 0.0258172362555, FOR: 0.4166666666666, F1S: 0.9859949243349, }, \
+ {name: "On", TP: 11, FN: 40, FP: 2, TN: 5355, TPR: 0.2156862745098, TNR: 0.9996266567108, PPV: 0.8461538461538, NPV: 0.9925857275254, FNR: 0.7843137254901, FPR: 0.0003733432891, FDR: 0.1538461538461, FOR: 0.0074142724745, F1S: 0.34375, }, \
+ {name: "Off", TP: 1, FN: 32, FP: 4, TN: 5371, TPR: 0.0303030303030, TNR: 0.9992558139534, PPV: 0.2, NPV: 0.9940773644271, FNR: 0.9696969696969, FPR: 0.0007441860465, FDR: 0.8, FOR: 0.0059226355728, F1S: 0.0526315789473, }, \
+ {name: "Dimmer", TP: 0, FN: 33, FP: 1, TN: 5374, TPR: 0, TNR: 0.9998139534883, PPV: 0, NPV: 0.9938968004438, FNR: 1, FPR: 0.0001860465116, FDR: 1, FOR: 0.0061031995561, F1S: 0, }, \
+ {name: "Lighter", TP: 2, FN: 34, FP: 3, TN: 5369, TPR: 0.0555555555555, TNR: 0.9994415487714, PPV: 0.4, NPV: 0.9937071997038, FNR: 0.9444444444444, FPR: 0.0005584512285, FDR: 0.6, FOR: 0.0062928002961, F1S: 0.0975609756097, }, \
 }
 
 #ifdef IMAI_STATS_ENABLED
@@ -259,35 +259,35 @@ static const IMAI_stats IMAI_test_stats[] = IMAI_TEST_STATS;
 /*
 * Tensorflow Train Set
 * 
-* (ACC) Accuracy 96.814 %
-* (F1S) F1 Score 96.724 %
+* (ACC) Accuracy 96.346 %
+* (F1S) F1 Score 95.679 %
 * 
 * Name of class                                               unlabeled           Dimmer          Lighter              Off               On
-* (TP) True Positive or Correct Positive Prediction               19788               96               83              128              203
-* (FN) False Negative or Incorrect Negative Prediction              285               47              111               60              165
-* (FP) False Positive or Incorrect Positive Prediction              377               86               60               80               65
-* (TN) True Negative or Correct Negative Prediction                 516            20737            20712            20698            20533
-* (TPR) True Positive Rate or Sensitivity, Recall               98.58 %          67.13 %          42.78 %          68.09 %          55.16 %
-* (TNR) True Negative Rate or Specificity, Selectivity          57.78 %          99.59 %          99.71 %          99.61 %          99.68 %
-* (PPV) Positive Predictive Value or Precision                  98.13 %          52.75 %          58.04 %          61.54 %          75.75 %
-* (NPV) Negative Predictive Value                               64.42 %          99.77 %          99.47 %          99.71 %          99.20 %
-* (FNR) False Negative Rate or Miss Rate                         1.42 %          32.87 %          57.22 %          31.91 %          44.84 %
-* (FPR) False Positive Rate or Fall-Out                         42.22 %           0.41 %           0.29 %           0.39 %           0.32 %
-* (FDR) False Discovery Rate                                     1.87 %          47.25 %          41.96 %          38.46 %          24.25 %
-* (FOR) False Omission Rate                                     35.58 %           0.23 %           0.53 %           0.29 %           0.80 %
-* (F1S) F1 Score                                                98.35 %          59.08 %          49.26 %          64.65 %          63.84 %
+* (TP) True Positive or Correct Positive Prediction               19897               60                6               61              176
+* (FN) False Negative or Incorrect Negative Prediction              176               83              188              127              192
+* (FP) False Positive or Incorrect Positive Prediction              590               46                8               35               87
+* (TN) True Negative or Correct Negative Prediction                 303            20777            20764            20743            20511
+* (TPR) True Positive Rate or Sensitivity, Recall               99.12 %          41.96 %           3.09 %          32.45 %          47.83 %
+* (TNR) True Negative Rate or Specificity, Selectivity          33.93 %          99.78 %          99.96 %          99.83 %          99.58 %
+* (PPV) Positive Predictive Value or Precision                  97.12 %          56.60 %          42.86 %          63.54 %          66.92 %
+* (NPV) Negative Predictive Value                               63.26 %          99.60 %          99.10 %          99.39 %          99.07 %
+* (FNR) False Negative Rate or Miss Rate                         0.88 %          58.04 %          96.91 %          67.55 %          52.17 %
+* (FPR) False Positive Rate or Fall-Out                         66.07 %           0.22 %           0.04 %           0.17 %           0.42 %
+* (FDR) False Discovery Rate                                     2.88 %          43.40 %          57.14 %          36.46 %          33.08 %
+* (FOR) False Omission Rate                                     36.74 %           0.40 %           0.90 %           0.61 %           0.93 %
+* (F1S) F1 Score                                                98.11 %          48.19 %           5.77 %          42.96 %          55.78 %
 */
 
 
-#define IMAI_TRAIN_AVG_ACC 0.9681388915386817 // Accuracy
-#define IMAI_TRAIN_AVG_F1S 0.9672446446841126 // F1 Score
+#define IMAI_TRAIN_AVG_ACC 0.9634646570638176 // Accuracy
+#define IMAI_TRAIN_AVG_F1S 0.9567902651686335 // F1 Score
 
 #define IMAI_TRAIN_STATS { \
- {name: "unlabeled", TP: 19788, FN: 285, FP: 377, TN: 516, TPR: 0.9858018233447, TNR: 0.5778275475923, PPV: 0.9813042400198, NPV: 0.6441947565543, FNR: 0.0141981766552, FPR: 0.4221724524076, FDR: 0.0186957599801, FOR: 0.3558052434456, F1S: 0.9835478900541, }, \
- {name: "On", TP: 203, FN: 165, FP: 65, TN: 20533, TPR: 0.5516304347826, TNR: 0.9968443538207, PPV: 0.7574626865671, NPV: 0.9920282152865, FNR: 0.4483695652173, FPR: 0.0031556461792, FDR: 0.2425373134328, FOR: 0.0079717847134, F1S: 0.6383647798742, }, \
- {name: "Off", TP: 128, FN: 60, FP: 80, TN: 20698, TPR: 0.6808510638297, TNR: 0.9961497737992, PPV: 0.6153846153846, NPV: 0.9971095481260, FNR: 0.3191489361702, FPR: 0.0038502262007, FDR: 0.3846153846153, FOR: 0.0028904518739, F1S: 0.6464646464646, }, \
- {name: "Dimmer", TP: 96, FN: 47, FP: 86, TN: 20737, TPR: 0.6713286713286, TNR: 0.9958699514959, PPV: 0.5274725274725, NPV: 0.9977386451116, FNR: 0.3286713286713, FPR: 0.0041300485040, FDR: 0.4725274725274, FOR: 0.0022613548883, F1S: 0.5907692307692, }, \
- {name: "Lighter", TP: 83, FN: 111, FP: 60, TN: 20712, TPR: 0.4278350515463, TNR: 0.9971114962449, PPV: 0.5804195804195, NPV: 0.9946693560005, FNR: 0.5721649484536, FPR: 0.0028885037550, FDR: 0.4195804195804, FOR: 0.0053306439994, F1S: 0.4925816023738, }, \
+ {name: "unlabeled", TP: 19897, FN: 176, FP: 590, TN: 303, TPR: 0.9912320031883, TNR: 0.3393057110862, PPV: 0.9712012495728, NPV: 0.6325678496868, FNR: 0.0087679968116, FPR: 0.6606942889137, FDR: 0.0287987504271, FOR: 0.3674321503131, F1S: 0.9811143984220, }, \
+ {name: "On", TP: 176, FN: 192, FP: 87, TN: 20511, TPR: 0.4782608695652, TNR: 0.9957762889600, PPV: 0.6692015209125, NPV: 0.9907259817417, FNR: 0.5217391304347, FPR: 0.0042237110399, FDR: 0.3307984790874, FOR: 0.0092740182582, F1S: 0.5578446909667, }, \
+ {name: "Off", TP: 61, FN: 127, FP: 35, TN: 20743, TPR: 0.3244680851063, TNR: 0.9983155260371, PPV: 0.6354166666666, NPV: 0.9939147101102, FNR: 0.6755319148936, FPR: 0.0016844739628, FDR: 0.3645833333333, FOR: 0.0060852898897, F1S: 0.4295774647887, }, \
+ {name: "Dimmer", TP: 60, FN: 83, FP: 46, TN: 20777, TPR: 0.4195804195804, TNR: 0.9977909042885, PPV: 0.5660377358490, NPV: 0.9960210930009, FNR: 0.5804195804195, FPR: 0.0022090957114, FDR: 0.4339622641509, FOR: 0.0039789069990, F1S: 0.4819277108433, }, \
+ {name: "Lighter", TP: 6, FN: 188, FP: 8, TN: 20764, TPR: 0.0309278350515, TNR: 0.9996148661659, PPV: 0.4285714285714, NPV: 0.9910271095838, FNR: 0.9690721649484, FPR: 0.0003851338340, FDR: 0.5714285714285, FOR: 0.0089728904161, F1S: 0.0576923076923, }, \
 }
 
 #ifdef IMAI_STATS_ENABLED
@@ -297,35 +297,35 @@ static const IMAI_stats IMAI_train_stats[] = IMAI_TRAIN_STATS;
 /*
 * Tensorflow Validation Set
 * 
-* (ACC) Accuracy 96.834 %
-* (F1S) F1 Score 96.150 %
+* (ACC) Accuracy 97.032 %
+* (F1S) F1 Score 95.963 %
 * 
 * Name of class                                               unlabeled           Dimmer          Lighter              Off               On
-* (TP) True Positive or Correct Positive Prediction                5837                6                7               13                9
-* (FN) False Negative or Incorrect Negative Prediction               38               42               41               25               46
-* (FP) False Positive or Incorrect Positive Prediction              150               10               15               12                5
-* (TN) True Negative or Correct Negative Prediction                  39             6006             6001             6014             6004
-* (TPR) True Positive Rate or Sensitivity, Recall               99.35 %          12.50 %          14.58 %          34.21 %          16.36 %
-* (TNR) True Negative Rate or Specificity, Selectivity          20.63 %          99.83 %          99.75 %          99.80 %          99.92 %
-* (PPV) Positive Predictive Value or Precision                  97.49 %          37.50 %          31.82 %          52.00 %          64.29 %
-* (NPV) Negative Predictive Value                               50.65 %          99.31 %          99.32 %          99.59 %          99.24 %
-* (FNR) False Negative Rate or Miss Rate                         0.65 %          87.50 %          85.42 %          65.79 %          83.64 %
-* (FPR) False Positive Rate or Fall-Out                         79.37 %           0.17 %           0.25 %           0.20 %           0.08 %
-* (FDR) False Discovery Rate                                     2.51 %          62.50 %          68.18 %          48.00 %          35.71 %
-* (FOR) False Omission Rate                                     49.35 %           0.69 %           0.68 %           0.41 %           0.76 %
-* (F1S) F1 Score                                                98.42 %          18.75 %          20.00 %          41.27 %          26.09 %
+* (TP) True Positive or Correct Positive Prediction                5862                2                1                1               18
+* (FN) False Negative or Incorrect Negative Prediction               13               46               47               37               37
+* (FP) False Positive or Incorrect Positive Prediction              165                4                1                3                7
+* (TN) True Negative or Correct Negative Prediction                  24             6012             6015             6023             6002
+* (TPR) True Positive Rate or Sensitivity, Recall               99.78 %           4.17 %           2.08 %           2.63 %          32.73 %
+* (TNR) True Negative Rate or Specificity, Selectivity          12.70 %          99.93 %          99.98 %          99.95 %          99.88 %
+* (PPV) Positive Predictive Value or Precision                  97.26 %          33.33 %          50.00 %          25.00 %          72.00 %
+* (NPV) Negative Predictive Value                               64.86 %          99.24 %          99.22 %          99.39 %          99.39 %
+* (FNR) False Negative Rate or Miss Rate                         0.22 %          95.83 %          97.92 %          97.37 %          67.27 %
+* (FPR) False Positive Rate or Fall-Out                         87.30 %           0.07 %           0.02 %           0.05 %           0.12 %
+* (FDR) False Discovery Rate                                     2.74 %          66.67 %          50.00 %          75.00 %          28.00 %
+* (FOR) False Omission Rate                                     35.14 %           0.76 %           0.78 %           0.61 %           0.61 %
+* (F1S) F1 Score                                                98.50 %           7.41 %           4.00 %           4.76 %          45.00 %
 */
 
 
-#define IMAI_VALIDATION_AVG_ACC 0.9683377308707124 // Accuracy
-#define IMAI_VALIDATION_AVG_F1S 0.9614970161301672 // F1 Score
+#define IMAI_VALIDATION_AVG_ACC 0.9703166226912929 // Accuracy
+#define IMAI_VALIDATION_AVG_F1S 0.9596259391589578 // F1 Score
 
 #define IMAI_VALIDATION_STATS { \
- {name: "unlabeled", TP: 5837, FN: 38, FP: 150, TN: 39, TPR: 0.9935319148936, TNR: 0.2063492063492, PPV: 0.9749457157173, NPV: 0.5064935064935, FNR: 0.0064680851063, FPR: 0.7936507936507, FDR: 0.0250542842826, FOR: 0.4935064935064, F1S: 0.9841510706457, }, \
- {name: "On", TP: 9, FN: 46, FP: 5, TN: 6004, TPR: 0.1636363636363, TNR: 0.9991679147944, PPV: 0.6428571428571, NPV: 0.9923966942148, FNR: 0.8363636363636, FPR: 0.0008320852055, FDR: 0.3571428571428, FOR: 0.0076033057851, F1S: 0.2608695652173, }, \
- {name: "Off", TP: 13, FN: 25, FP: 12, TN: 6014, TPR: 0.3421052631578, TNR: 0.9980086292731, PPV: 0.52, NPV: 0.9958602417618, FNR: 0.6578947368421, FPR: 0.0019913707268, FDR: 0.48, FOR: 0.0041397582381, F1S: 0.4126984126984, }, \
- {name: "Dimmer", TP: 6, FN: 42, FP: 10, TN: 6006, TPR: 0.125, TNR: 0.9983377659574, PPV: 0.375, NPV: 0.9930555555555, FNR: 0.875, FPR: 0.0016622340425, FDR: 0.625, FOR: 0.0069444444444, F1S: 0.1875, }, \
- {name: "Lighter", TP: 7, FN: 41, FP: 15, TN: 6001, TPR: 0.1458333333333, TNR: 0.9975066489361, PPV: 0.3181818181818, NPV: 0.9932141674942, FNR: 0.8541666666666, FPR: 0.0024933510638, FDR: 0.6818181818181, FOR: 0.0067858325057, F1S: 0.2, }, \
+ {name: "unlabeled", TP: 5862, FN: 13, FP: 165, TN: 24, TPR: 0.9977872340425, TNR: 0.1269841269841, PPV: 0.9726231956197, NPV: 0.6486486486486, FNR: 0.0022127659574, FPR: 0.8730158730158, FDR: 0.0273768043802, FOR: 0.3513513513513, F1S: 0.9850445303310, }, \
+ {name: "On", TP: 18, FN: 37, FP: 7, TN: 6002, TPR: 0.3272727272727, TNR: 0.9988350807122, PPV: 0.72, NPV: 0.9938731578075, FNR: 0.6727272727272, FPR: 0.0011649192877, FDR: 0.28, FOR: 0.0061268421924, F1S: 0.45, }, \
+ {name: "Off", TP: 1, FN: 37, FP: 3, TN: 6023, TPR: 0.0263157894736, TNR: 0.9995021573182, PPV: 0.25, NPV: 0.9938943894389, FNR: 0.9736842105263, FPR: 0.0004978426817, FDR: 0.75, FOR: 0.0061056105610, F1S: 0.0476190476190, }, \
+ {name: "Dimmer", TP: 2, FN: 46, FP: 4, TN: 6012, TPR: 0.0416666666666, TNR: 0.9993351063829, PPV: 0.3333333333333, NPV: 0.9924067348960, FNR: 0.9583333333333, FPR: 0.0006648936170, FDR: 0.6666666666666, FOR: 0.0075932651039, F1S: 0.0740740740740, }, \
+ {name: "Lighter", TP: 1, FN: 47, FP: 1, TN: 6015, TPR: 0.0208333333333, TNR: 0.9998337765957, PPV: 0.5, NPV: 0.9922467832398, FNR: 0.9791666666666, FPR: 0.0001662234042, FDR: 0.5, FOR: 0.0077532167601, F1S: 0.04, }, \
 }
 
 #ifdef IMAI_STATS_ENABLED
@@ -338,7 +338,7 @@ static const IMAI_stats IMAI_validation_stats[] = IMAI_VALIDATION_STATS;
 #define IMAI_SYMBOL_MAP {"(unlabeled)", "On", "Off", "Dimmer", "Lighter"}
 
 // Model GUID (16 bytes)
-#define IMAI_MODEL_ID {0x75, 0x29, 0x1f, 0x76, 0x4b, 0xe9, 0x5b, 0x45, 0xaa, 0xbb, 0x50, 0x3f, 0xd0, 0xaa, 0xe6, 0x29}
+#define IMAI_MODEL_ID {0x1c, 0x8b, 0xd8, 0xfd, 0xf1, 0x49, 0x4e, 0x4f, 0xb5, 0x56, 0x6f, 0x84, 0x28, 0x7d, 0x15, 0x95}
 
 // First nibble is bit encoding, second nibble is number of bytes
 #define IMAGINET_TYPES_NONE	(0x0)
