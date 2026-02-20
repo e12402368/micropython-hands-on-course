@@ -1,6 +1,6 @@
 # Wifi
-SSID = ""
-KEY = ""
+SSID = "UPC9767902"
+KEY = "y5xyAefaevmt"
 
 # Deepcraft
 LABELS = ["nothing", "on", "off", "dimmer","lighter"]
@@ -11,10 +11,28 @@ SAMPLE_TIME = 1.0 / SAMPLE_FREQ
 GESTURE_THRESHOLD = 0.90
 COOLDOWN_MS = 800
 
-# Lamp
-BULB_IP = "192.168.0.143"
-BULB_PORT = 55443  # Standardport für das Yeelight/Mi-Protokoll
+# Lamp Network
+BULB_IP = "192.168.0.192"
+BULB_PORT = 55443
+SOCKET_TIMEOUT = 1.5
+
+#EFFECT = "smooth"
+EFFECT = "sudden"
+DURATION_POWER = 500
+DURATION_DIM = 300
+DURATION_COLOR = 300   # Dauer für den Wechsel der Farbtemperatur
+
+# Brightness (1 - 100)
+BRIGHTNESS_START = 100
 BRIGHTNESS_STEP = 10
+MAX_BRIGHTNESS = 100
+MIN_BRIGHTNESS = 1
+
+# colour temp (Kelvin)
+CT_START = 4000
+CT_STEP = 500
+CT_MIN = 2700  # Warmweiß
+CT_MAX = 6500  # Kaltweiß / Tageslicht
 
 # IMU
 I2C_SCL = 'P0_2'
@@ -22,5 +40,3 @@ I2C_SDA = 'P0_3'
 
 # User Button
 BUTTON_PIN = 'P5.2'
-
-

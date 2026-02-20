@@ -1,20 +1,19 @@
 import socket
-from configuration import BRIGHTNESS_STEP
+import configuration as cfg
 
 class MiLight:
     def __init__(self, ip, port):
         self.ip = ip
         self.port = port
-        self.is_on = False
-        self.brightness = 50  
-        self.step = BRIGHTNESS_STEP
+        self.brightness = cfg.BRIGHTNESS_START
+        self.ct = cfg.CT_START
 
     def _send(self, method, params):
         """Helper to format and send JSON commands via TCP."""
         msg = '{"id":1,"method":"' + method + '","params":' + str(params).replace("'", '"') + '}\r\n'
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.settimeout(1.5)
+            s.settimeout(cfg.SOCKET_TIMEOUT)
             s.connect((self.ip, self.port))
             s.send(msg.encode())
             s.close()
@@ -23,24 +22,23 @@ class MiLight:
             return False
 
     def turn_on(self):
-        self.is_on = True
-        return self._send("set_power", ["on", "smooth", 500])
+        return self._send("set_power", ["on", cfg.EFFECT, cfg.DURATION_POWER])
 
     def turn_off(self):
-        self.is_on = False
-        return self._send("set_power", ["off", "smooth", 500])
-
-    def toggle(self):
-        return self.turn_off() if self.is_on else self.turn_on()
+        return self._send("set_power", ["off", cfg.EFFECT, cfg.DURATION_POWER])
 
     def brighten(self):
-        if self.brightness < 100:
-            self.brightness = min(100, self.brightness + self.step)
-            return self._send("set_bright", [self.brightness, "smooth", 300])
-        return True
+        self.brightness = min(cfg.MAX_BRIGHTNESS, self.brightness + cfg.BRIGHTNESS_STEP)
+        return self._send("set_bright", [self.brightness, cfg.EFFECT, cfg.DURATION_DIM])
 
     def dim(self):
-        if self.brightness > 1:
-            self.brightness = max(1, self.brightness - self.step)
-            return self._send("set_bright", [self.brightness, "smooth", 300])
-        return True
+        self.brightness = max(cfg.MIN_BRIGHTNESS, self.brightness - cfg.BRIGHTNESS_STEP)
+        return self._send("set_bright", [self.brightness, cfg.EFFECT, cfg.DURATION_DIM])
+    
+    def warmer(self):
+        self.ct = max(cfg.CT_MIN, self.ct - cfg.CT_STEP)
+        return self._send("set_ct_abx", [self.ct, cfg.EFFECT, cfg.DURATION_COLOR])
+
+    def cooler(self):
+        self.ct = min(cfg.CT_MAX, self.ct + cfg.CT_STEP)
+        return self._send("set_ct_abx", [self.ct, cfg.EFFECT, cfg.DURATION_COLOR])
