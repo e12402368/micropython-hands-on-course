@@ -12,7 +12,7 @@ while True:
     # --- PHASE 1: Helligkeit iterieren ---
     # Zuerst auf Minimum setzen
     bulb.brightness = cfg.MIN_BRIGHTNESS
-    bulb.brighten() 
+    bulb.brighten()
     time.sleep(1)
 
     for i in range(brightness_steps):

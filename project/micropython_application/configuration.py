@@ -1,6 +1,6 @@
 # Wifi
-SSID = "UPC9767902"
-KEY = "y5xyAefaevmt"
+SSID = "iPhone von Manuel"
+KEY = "Licht1234"
 
 # Deepcraft
 LABELS = ["nothing", "on", "off", "dimmer","lighter"]
@@ -12,7 +12,7 @@ GESTURE_THRESHOLD = 0.90
 COOLDOWN_MS = 800
 
 # Lamp Network
-BULB_IP = "192.168.0.192"
+BULB_IP = "172.20.10.2"
 BULB_PORT = 55443
 SOCKET_TIMEOUT = 1.5
 
