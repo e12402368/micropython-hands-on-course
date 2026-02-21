@@ -1,3 +1,4 @@
+import gc # Garbagecollector
 import array
 import time
 import deepcraft_model as m
@@ -24,10 +25,10 @@ input_buffer = array.array('f', [0.0] * input_dim)
 i2c = I2C(scl=Pin(cfg.I2C_SCL), sda=Pin(cfg.I2C_SDA))
 bmi = bmi270.BMI270(i2c)
 
-# User LED initialisieren
-# Wir nutzen cfg.USER_LED ('P5.3') aus deiner Konfiguration
+# LED init
 led = Pin(cfg.USER_LED, Pin.OUT)
-led_timer = 0  # Hilfsvariable für das Blinken
+led_state = False  # Eigene Variable für den Zustand
+led_timer = time.ticks_ms()
 
 # Variables and constants
 sample_time_ms = int(cfg.SAMPLE_TIME * 1000)
@@ -36,6 +37,8 @@ last_action_time = 0
 
 max_score = -1
 best_label = 0
+
+result = 0
 
 # -------------------------
 # Hilfsfunktionen
@@ -56,21 +59,19 @@ def argmax(buffer, length):
 # MAIN LOOP
 # -------------------------
 
-# init led blink time
-led_timer = time.ticks_ms()
-
 print("Start main loop")
 
 while True:    
 
     loop_start = time.ticks_ms()
 
-    # -------- Heartbeat LED --------
-    # Alle 500ms den Zustand der LED invertieren
+    # -------- Heartbeat LED (korrigiert) --------
     if time.ticks_diff(loop_start, led_timer) > 1000:
-        led.value(0 if led.value() else 1)
+        print('b') # debug message
+        
+        led_state = not led_state  # Zustand in Software umschalten
+        led.value(1 if led_state else 0)
         led_timer = loop_start
-
 
     # -------- Sensor lesen --------
     try:
@@ -87,7 +88,7 @@ while True:
     input_buffer[5] = gz
 
     # -------- Modell beladen --------
-    model.enqueue(input_buffer)
+    result = model.enqueue(input_buffer)
 
     # -------- Ergebnis verarbeiten --------
     if model.dequeue(output_buffer) == 0:
@@ -99,21 +100,36 @@ while True:
         if max_score > cfg.GESTURE_THRESHOLD and best_label != 0 and loop_start > last_action_time + cfg.COOLDOWN_MS:
             last_action_time = loop_start
             
-            # Mapping der Labels auf Aktionen
-            if best_label == 1:
-                bulb.turn_on()
-            elif best_label == 2:
-                bulb.turn_off()
-            elif best_label == 3:
-                bulb.brighten()
-            elif best_label == 4:
-                bulb.dim()
-
+            """
+            try:
+                if best_label == 1:
+                    bulb.turn_on()
+                elif best_label == 2:
+                    bulb.turn_off()
+                elif best_label == 3:
+                    bulb.brighten()
+                elif best_label == 4:
+                    bulb.dim()
+            except Exception as e:
+                print("Netzwerkfehler:", e)
+            """
+    """
+    else:
+        # --- Speicher management ---
+        # in schnellen durchläufen aufräumen
+        gc.collect()
+    """
+        
+    # debug message:
+    #t_model = time.ticks_diff(time.ticks_ms(), loop_start)
+    #print(t_model)
     
     # -------- Sauberes Timing --------
     elapsed = time.ticks_diff(time.ticks_ms(), loop_start)
 
     if elapsed < sample_time_ms:
         time.sleep_ms(sample_time_ms - elapsed)
-
+    else:
+        # Debug message
+        print("Timing")
 
